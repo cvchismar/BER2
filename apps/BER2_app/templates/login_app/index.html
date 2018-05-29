@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'logreg_app/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./../../static/login_app/styles.css">
+    <title>Login</title>
+</head>
+<!-- <style>
+    div{
+        overflow-y: scroll;
+        border: 2px solid black;
+        display: inline-block;
+        height: 200px;
+    }
+</style> -->
+
+<style>
+    table, th, td, tr{
+        border: 3px solid black;
+        border-collapse: collapse;
+        padding: 3px;
+        font-size: 26px;
+        background-color: white;
+    }
+    body{
+        background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    button{
+        background-color: white;
+    }
+
+
+</style>
+<body><center>
+    <h1>Welcome {{request.session.name}}!!</h1>
+    <table>
+    <tr>
+        <th>City:</th>
+        <th>Session Title:</th>
+        <th>Session Code:</th>  
+        <th>Session Start Date:</th>
+        <th>Session End Date:</th>
+        <th>Presenter:</th>
+        <th># Participants: </th>
+        <th># Paid: </th>
+        <!-- <th>Add Attendees:</th> -->
+
+    </tr>
+    {% for session in sessions %}
+    <tr>
+        <td><a href="/info/{{session.id}}">{{session.city}}</a></td>
+        <td>{{session.title}}</td>
+        <td>{{session.code}}</td>
+        <td>{{session.start}}</td>
+        <td>{{session.end}}</td>
+        <td>{{session.presenter}}</td>
+        <td>26</td>
+        <td>24</td>
+        <!-- <td><a href="/join/{{session.id}}"><button>Join</button></a></td> -->
+        </tr>
+    {% endfor %}
+    </table>
+    <p>
+    <!-- <table>
+        <tr>
+            <th>Name:</th>
+            <th>Destination:</th>
+            <th>Session Date Start:</th>
+            <th>Session Date End:</th>
+            <th>Presenter:</th>
+            <th>Join this Session:</th>
+        </tr>
+        {% for session in other_sessions %}
+        <tr>
+            <td>{{session.created_by.name}}</td>
+            <td><a href="/info/{{ session.id }}">{{ session.city }}</a></td>
+            <td>{{ session.start }}</td>
+            <td>{{ session.end }}</td>
+            <td>{{ session.presenter}}</td>
+            <td><a href="/join/{{ session.id }}"></a> <button>Join</button></a></td>
+            </tr>
+        {% endfor %}
+    </table></p> -->
+
+    <br><br><br>
+
+  <!--  <a href="/place">Join</a> -->
+    <a href="/add_session"><button>Add Session</button></a><br>
+    <a href=""><button>Back</button></a><br>
+    <a href="/"><button>LogOut</button></a>
+</center>
+</body>
+
+</html>

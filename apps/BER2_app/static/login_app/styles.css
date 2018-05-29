@@ -1,0 +1,18 @@
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d6f9ff+0,9ee8fa+100;Blue+3D */
+*{
+    background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    }
+
+#table1{
+    border: 5px black solid;
+    display: inline-block;
+    padding: 10px;
+    }
+    
+#table2{
+    padding: 10px;
+    border: 5px black solid;
+    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: top;
+    }

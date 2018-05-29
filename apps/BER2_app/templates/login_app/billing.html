@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'logreg_app/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./../../static/login_app/styles.css">
+    <title>Billing</title>
+</head>
+<style>
+        table, th, td, tr{
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+            font-size: 26px;
+            background-color: white;
+        }
+        body{
+            background: #8A2387;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+        }
+        button{
+            background-color: white;
+        }
+        div{
+            font-weight: bolder;
+            font-size: 24px;
+        }
+    </style>
+<body><center>
+    <h1>Hotel Billing Information</h1> 
+    <h1>{{Session.city}}</h1>
+    <h2><u>Hotel: </u></h2> Four Points By Sheraton - Airport<br>
+    <h2><u>Phone #: </u></h2> 855-555-1234
+    <h2><u>Contact: </u></h2> Jane Doe
+    <h2><u>CONFIRMATION #: </u></h2> 55555555555
+    <h2><u>Sleeping Room Rates: </u></h2> $110.00
+    <br><br>
+    <h1>Food Information: </h1>
+    <h2><u>Breakfast Order:</u></h2> 
+        <p>2.0 dozen Muffins @ $20.00/dozen</p>
+        <h4><u>Total: </u></h4> $40.00
+        <p>2.0 gallons @ $40.00/gallon</p>
+        <h4><u>Total: </u></h4> $80.00
+        <p>Breakfast Order @ 9:30AM</p>
+    <h2><u>Lunch Order: </u></h2>
+        <p>No lunch provided</p>
+    <h2><u>Afternoon Service: </u></h2>
+        <p>Not Provided</p>
+    <h1>Audio/Visual Requirements</h1>
+    <p>Set up AV by 7:00 AM</p>
+    <p>Following was ordered: </p>
+    <h3> 1 - 8' Screen @ $50.00</h3>
+    <h3>3 - Display tables @ $25.00</h3>
+    <br><br><br><br>
+    <a href="/display"><button>Home</button></a><br>
+    
+    <a href="/"><button>LogOut</button></a>
+</center>  
+</body>
+</html>

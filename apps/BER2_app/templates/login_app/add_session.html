@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>Add Session</title>
+</head>
+<style>
+        table, th, td, tr{
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+            font-size: 26px;
+            background-color: white;
+        }
+        body{
+            background: #8A2387;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+        }
+        button{
+            background-color: white;
+        }
+    </style>
+<body><center>
+    <h1>Add a Session</h1>
+    <h2>Welcome {{request.session.name}}</h2>
+    <ul>
+    {% for error in messages %}
+        <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+    <form action="/create" method="POST">
+        {% csrf_token %}
+    <p>Session Code:
+        <input type="text" name="code"> </p>
+    <p>Session Title:
+        <input type="text" name="title"></p>
+    <p>Session Start Date:
+        <input type="date" name="start" id="cal"></p>
+    <p>
+        Session End Date:
+        <input type="date" name="end" id="cal"></p>
+    <p>
+        Session Presenter:
+        <input type="text" name="presenter"></p>
+    <p> Session Location: 
+        <input type="text" name="city"></p>
+    
+        <input type="submit" value="Create">
+    </form>
+
+    <p><a href="/display"><button>Back</button></a></p>
+    <p><a href="/"><button>LogOut</button></a></p>
+</body>
+</center>
+</html>

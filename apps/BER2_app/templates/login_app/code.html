@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'exam_app/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>Sessions</title>
+</head>
+<style>
+        table, th, td, tr{
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+            font-size: 26px;
+            background-color: white;
+        }
+        body{
+            background: #8A2387;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+        }
+        button{
+            background-color: white;
+        }
+        div{
+            font-weight: bolder;
+            font-size: 24px;
+        }
+    </style>
+<body><center>
+    <div>
+        <h1>Session:</h1>
+        <p><h3><u>Title:</u></h3> {{lecture.title}}</p>
+        <p><h3><u>City:</u></h3> {{lecture.city}}</p>
+        <p><h3><u>Presenter:</u></h3> {{lecture.presenter}}</p>  
+        <p><h3><u>Session Start Date:</u></h3> {{lecture.start}}</p>
+    </div>
+    <br>
+    <table>
+        <tr>
+            <th>First Name: </th>
+            <th>Last Name: </th>
+            <th>Email: </th>
+            <th>Balance Due: </th>
+            <th>Paid: </th>
+            <th>Check In:</th>
+            <th>Check Out: </th>
+            <th>Edit: </th>
+        </tr>
+        <tr>
+            <td>Samia</td>
+            <td>Ahmed</td>
+            <td>Samia@email.com</td>
+            <td>$0</td>
+            <td>$239.00</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button>EDIT</button></td>
+        </tr>
+        <tr>
+            <td>Ernest</td>
+            <td>Mills</td>
+            <td>Ernest@email.com</td>
+            <td>$0</td>
+            <td>$239.00</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button>EDIT</button></td>
+        </tr>
+        <tr>
+            <td>Linda</td>
+            <td>Peralta</td>
+            <td>Linda@email.com</td>
+            <td>$0</td>
+            <td>$239.00</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button>EDIT</button></td>
+        </tr>
+        <tr>
+            <td>Ben</td>
+            <td>Burch</td>
+            <td>Ben@email.com</td>
+            <td>$0</td>
+            <td>$239.00</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button>EDIT</button></td>
+        </tr>
+        <tr>
+            <td>Corey</td>
+            <td>Williamson</td>
+            <td>Corey@email.com</td>
+            <td>$0</td>
+            <td>$239.00</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button>EDIT</button></td>
+        </tr>
+        <tr>
+            <td>Liz</td>
+            <td>Johnson</td>
+            <td>Liz@email.com</td>
+            <td>$0</td>
+            <td>$239.00</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><button>EDIT</button></td>
+        </tr>
+    </table>
+
+    <br><br><br>
+    <p><a href=""><button>Register New Attendee</button></a></p>
+    <p><a href="/billing"><button>Billing</button></a></p>
+    <p><a href="/display"><button>Back</button></a></p>
+    <p><a href="/"><button>LogOut</button></a></p>
+</body>
+</center>
+</html>
